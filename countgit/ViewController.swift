@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var count: Int = 0
+    @IBOutlet var label: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +23,23 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func plus() {
+        count = count + 1
+        label.text = String(count)
+    }
 
-
+    @IBAction func mainus() {
+        count = count - 1
+        label.text = String(count)
+    }
+    
+    @IBAction func kake() {
+        count = count * 2 + 1
+        label.text = String(count)
+    }
+    
 }
+
+
 
